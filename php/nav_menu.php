@@ -1,3 +1,4 @@
+<!-- Will be the navigation menu, containing all links to get to different parts of the website -->
 <?php
 ?>
 
