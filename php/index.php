@@ -6,7 +6,7 @@ if(isset($_POST['username'])){
     
 }
 include("../php/header.php");
-    ?>
+?>
     
 <html>
 	<head>
