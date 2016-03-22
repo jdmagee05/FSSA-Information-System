@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+label {
+    width: 170px;display: block;vertical-align:middle;float:left;clear:left;
+}
+input {
+    border-top-left-radius:5px;border-bottom-right-radius : 10px;outline:none;
+}
+#wrapper {
+    overflow: hidden; /* add this to contain floated children */
+	margin: auto;
+    width: 70%;
+    border: 3px;
+    padding: 10px;
+}
+#first {
+    width: 325px;
+    float:left; /* add this */
+	border-right: 5px solid #cfc7c0;
+	padding-right: 30px;
+}
+#second {
+	width: 325px;
+	float:right; /* add this */
+}
