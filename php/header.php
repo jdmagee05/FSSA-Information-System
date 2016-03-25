@@ -1,9 +1,5 @@
 <?php
-if(isset($_POST['username'])){
-    session_start();
-    $_SESSION['name']=$_POST['username'];
-
-}
+session_start();
 ?>
 
 <html>
@@ -12,18 +8,15 @@ if(isset($_POST['username'])){
 </head>
 <body>
 	<div class="header">
-		<img src="../images/FSSA_Crest_with_text.jpg" alt="FSSA Crest"/>
+		<a href="index.php"><img src="../images/FSSA_Crest_with_text.jpg" alt="FSSA Crest"/></a>
 	</div>
-	<?php if(!isset($_POST['username'])){ ?>
-     <div class="corner_login">
-		<form action="" method="post" id="corner_login">
-			Username: <input type="text" name="username"><br>
-			Password: <input type="password" name="password"><br>
-			<input type="submit" value="Login">
-		</form>
-		<h3>Sign up!</h3>
-	</div>
-	<?php } ?>
 	
+     <div class="corner_login">
+     <?php if(isset($_SESSION['username'])){
+         echo 'Welcome ' . $_SESSION['username'] . '!';
+         echo '<br>';
+         echo '<a href="logout.php">Logout</a>';
+        }?>
+	</div>
 </body>
 </html>

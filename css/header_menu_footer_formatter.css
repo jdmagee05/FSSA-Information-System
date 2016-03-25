@@ -1,0 +1,43 @@
+@CHARSET "ISO-8859-1";
+.header{
+	float: left;
+	margin-left: 75px;
+	display: inline-block;
+}
+
+.nav_menu {
+	float: left;
+    position: fixed;
+	background-color: #C0C0C0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 180px;
+    padding: 10px;
+	margin-top: 230px;
+	display: inline-block;
+}
+
+.index_content{
+    width: 45%;
+    display:inline-block;
+	margin-left: 600px;
+}
+
+.add_member_fields{
+	width: 45%;
+    display:inline-block;
+	margin-left: 500px;
+}
+
+input[type=radio]{
+	display: inline;
+}
+
+.generated_table th, .generated_table tr, .generated_table td{
+	border: 1px solid black;
+}
+
+.generated_table{
+	margin-top: 20px;
+}
