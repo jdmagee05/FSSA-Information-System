@@ -82,37 +82,39 @@ if($member_type == 4 || $member_type == 5 || $member_type == 6){
 	</div>	
 
      <div class="add_member_fields">
-     <h3>Add a Member to the Society</h3>
+     <h3>Edit Member Information</h3>
 		<form action="updateMember.php" method="post" id="edit_member">
 		<table>
 		<tr>
 			<td>*First Name:</td>
-			<td><input type="text" name="firstname" value="<?php echo $firstname; ?>"><br></td>
+			<td><input type="text" name="firstname" value="<?php echo $firstname; ?>" required><br></td>
 			
 			<td>*Home Phone:</td>
-			<td><input type="text" name="homephone" value="<?php echo $homephone; ?>"><br></td>
+			<td><input type="tel" pattern="^\d{11}$" name="homephone" value="<?php echo $homephone; ?>" required><br></td>
+			<td>(Format: Country code, Area Code, Phone #. No separators)</td>
 		</tr>
 		<tr>
 			<td>*Last Name:</td>
-			<td><input type="text" name="lastname" value="<?php echo $lastname; ?>"><br></td>
+			<td><input type="text" name="lastname" value="<?php echo $lastname; ?>" required><br></td>
 			
 			<td>Cell Phone:</td>
-			<td><input type="text" name="cellphone" value="<?php echo $cellphone; ?>"><br></td>
+			<td><input type="tel" pattern="^\d{11}$" name="cellphone" value="<?php echo $cellphone; ?>"><br></td>
+			<td>(Format: Country code, Area Code, Phone #. No separators)</td>
 		</tr>
 		<tr>
 			<td>Middle Name:</td>
 			<td><input type="text" name="middlename" value="<?php echo $middlename; ?>"><br></td>
 			
 			<td>Email:</td>
-			<td><input type="text" name="email" value="<?php echo $email; ?>"><br></td>
+			<td><input type="email" name="email" value="<?php echo $email; ?>"><br></td>
 		</tr>
 		<tr>
 			<td>*Birth Date:</td>
-			<td><input type="date" name="birthDate" value="<?php echo $birthDate; ?>"><br></td>
+			<td><input type="date" name="birthDate" value="<?php echo $birthDate; ?>" required><br></td>
 			
 			<td>*Member Type:</td>
 			<td>
-				<select name="member_type">
+				<select name="member_type" required>
 					<option value="1" <?php if ($member_type == 1) echo ' selected="selected"'; ?>>Regular</option>
 					<option value="2" <?php if ($member_type == 2) echo ' selected="selected"'; ?>>Associate</option>
 					<option value="3" <?php if ($member_type == 3) echo ' selected="selected"'; ?>>5-Year</option>
@@ -124,11 +126,11 @@ if($member_type == 4 || $member_type == 5 || $member_type == 6){
 		</tr>
 		<tr>
 			<td>*Birth Place:</td>
-			<td><input type="text" name="birthPlace" value="<?php echo $birthPlace; ?>"><br></td>
+			<td><input type="text" name="birthPlace" value="<?php echo $birthPlace; ?>" required><br></td>
 			
 			<td>*Member Status:</td>
 			<td>
-				<select name="member_status">
+				<select name="member_status" required>
 					<option value="normal" <?php if ($member_status == "normal") echo ' selected="selected"'; ?>>Normal</option>
 					<option value="deceased" <?php if ($member_status == "deceased") echo ' selected="selected"'; ?>>Deceased</option>
 					<option value="lapsed" <?php if ($member_status == "lapsed") echo ' selected="selected"'; ?>>Lapsed</option>
@@ -138,11 +140,11 @@ if($member_type == 4 || $member_type == 5 || $member_type == 6){
 		</tr>
 		<tr>
 			<td>*Address:</td>
-			<td><input type="text" name="address" value="<?php echo $address; ?>"><br></td>
+			<td><input type="text" name="address" value="<?php echo $address; ?>" required><br></td>
 		</tr>
 		<tr>
 			<td>*City:</td>
-			<td><input type="text" name="city" value="<?php echo $city; ?>"><br></td>
+			<td><input type="text" name="city" value="<?php echo $city; ?>" required><br></td>
 			
 			<td>Membership Expiry Date:</td>
 			<td><?php echo $expiry_date; ?></td>
@@ -150,7 +152,7 @@ if($member_type == 4 || $member_type == 5 || $member_type == 6){
 		<tr>
 			<td>*Province:</td>
 			<td>
-				<select name="province">
+				<select name="province" required>
 					<option value="AB" <?php if ($province == "AB") echo ' selected="selected"'; ?>>Alberta</option>
 					<option value="BC" <?php if ($province == "BC") echo ' selected="selected"'; ?>>British Columbia</option>
 					<option value="MB" <?php if ($province == "MB") echo ' selected="selected"'; ?>>Manitoba</option>
@@ -169,11 +171,11 @@ if($member_type == 4 || $member_type == 5 || $member_type == 6){
 		</tr>
 		<tr>
 			<td>*Country:</td>
-			<td><input type="text" name="country" value="<?php echo $country; ?>"><br></td>
+			<td><input type="text" name="country" value="<?php echo $country; ?>" required><br></td>
 		</tr>
 		<tr>
 			<td>*Postal Code:</td>
-			<td><input type="text" name="postalcode" value="<?php echo $postalcode; ?>"><br></td>
+			<td><input type="text" name="postalcode" value="<?php echo $postalcode; ?>" required><br></td>
 		</tr>
 		
 		<tr>

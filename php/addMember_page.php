@@ -29,32 +29,34 @@
 		<table>
 		<tr>
 			<td>*First Name:</td>
-			<td><input type="text" name="firstname"><br></td>
+			<td><input type="text" name="firstname" required><br></td>
 			
 			<td>*Home Phone:</td>
-			<td><input type="text" name="homephone"><br></td>
+			<td><input type="tel" pattern="^\d{11}$" name="homephone" required><br></td>
+			<td>(Format: Country code, Area Code, Phone #. No separators)</td>
 		</tr>
 		<tr>
 			<td>*Last Name:</td>
-			<td><input type="text" name="lastname"><br></td>
+			<td><input type="text" name="lastname" required><br></td>
 			
 			<td>Cell Phone:</td>
-			<td><input type="text" name="cellphone"><br></td>
+			<td><input type="tel" pattern="^\d{11}$" name="cellphone"><br></td>
+			<td>(Format: Country code, Area Code, Phone #. No separators)</td>
 		</tr>
 		<tr>
 			<td>Middle Name:</td>
 			<td><input type="text" name="middlename"><br></td>
 			
 			<td>Email:</td>
-			<td><input type="text" name="email"><br></td>
+			<td><input type="email" name="email"><br></td>
 		</tr>
 		<tr>
 			<td>*Birth Date:</td>
-			<td><input type="date" name="birthDate"><br></td>
+			<td><input type="date" name="birthDate" required><br></td>
 			
 			<td>*Member Type:</td>
 			<td>
-				<select name="member_type">
+				<select name="member_type" required>
 					<option value="1">Regular</option>
 					<option value="2">Associate</option>
 					<option value="3">5-Year</option>
@@ -66,11 +68,11 @@
 		</tr>
 		<tr>
 			<td>*Birth Place:</td>
-			<td><input type="text" name="birthPlace"><br></td>
+			<td><input type="text" name="birthPlace" required><br></td>
 			
 			<td>*Member Status:</td>
 			<td>
-				<select name="member_status">
+				<select name="member_status" required>
 					<option value="normal">Normal</option>
 					<option value="deceased">Deceased</option>
 					<option value="lapsed">Lapsed</option>
@@ -80,22 +82,22 @@
 		</tr>
 		<tr>
 			<td>*Address:</td>
-			<td><input type="text" name="address"><br></td>
+			<td><input type="text" name="address" required><br></td>
 			
 			<td>*Date Applied:</td>
-			<td><input type="date" name="dateApplied"><br></td>
+			<td><input type="date" name="dateApplied" required><br></td>
 		</tr>
 		<tr>
 			<td>*City:</td>
-			<td><input type="text" name="city"><br></td>
+			<td><input type="text" name="city" required><br></td>
 			
 			<td>*Date Approved:</td>
-			<td><input type="date" name="dateApproved"><br></td>
+			<td><input type="date" name="dateApproved" required><br></td>
 		</tr>
 		<tr>
 			<td>*Province:</td>
 			<td>
-				<select name="province">
+				<select name="province" required>
 					<option value="AB">Alberta</option>
 					<option value="BC">British Columbia</option>
 					<option value="MB">Manitoba</option>
@@ -113,15 +115,15 @@
 			</td>
 			
 			<td>*Date Inducted:</td>
-			<td><input type="date" name="dateInducted"><br></td>
+			<td><input type="date" name="dateInducted" required><br></td>
 		</tr>
 		<tr>
 			<td>*Country:</td>
-			<td><input type="text" name="country"><br></td>
+			<td><input type="text" name="country" required><br></td>
 		</tr>
 		<tr>
 			<td>*Postal Code:</td>
-			<td><input type="text" name="postalcode"><br></td>
+			<td><input type="text" name="postalcode" required><br></td>
 		</tr>
 			
 		</table>

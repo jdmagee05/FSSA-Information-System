@@ -9,13 +9,14 @@
 <body>
 	<?php if(!isset($_SESSION['username'])){ ?>
 	<div class="loggedOutMenu">
+		<h3>FSSA Menu</h3>
 		<a href="index.php">FSSA Information</a>
 		<br>
 		<a href="index.php">Research Heritage</a>
 		<br>
 		<a href="index.php">Upcoming Events</a>
 		<br>
-		<a href="index.php">Join Us!</a>
+		<a href="application_directory.php">Join Us!</a>
 		<br>
 		<a href="login_page.php">Members Only</a>
 	</div>
@@ -23,13 +24,14 @@
 	
 	<?php if(isset($_SESSION['username']) && $_SESSION['user_type'] == 'member'){ ?>
 	<div class="memberMenu">
+		<h3>FSSA Menu</h3>
 		<a href="index.php">FSSA Information</a>
 		<br>
 		<a href="index.php">Research Heritage</a>
 		<br>
 		<a href="index.php">Events</a>
 		<br>
-		<h3>Member</h3>
+		<h3 style="margin-bottom: 2px;">Member</h3>
 		<a href="index.php">Comments</a>
 		<br>
 		<a href="index.php">Surveys</a>
@@ -42,12 +44,12 @@
 	
 	<?php if(isset($_SESSION['username']) && $_SESSION['user_type'] == 'admin'){ ?>
 	<div class="adminMenu">
+		<h3>FSSA Menu</h3>
 		<a href="index.php">FSSA Information</a>
 		<br>
 		<a href="index.php">Research Heritage</a><br>
 		
-	    <h3>Member</h3>
-	    <br>
+	    <h3 style="margin-bottom: 2px;">Member</h3>
 		<a href="addMember_page.php">Add a Member</a>
 		<br>
 		<a href="edit_personal_info.php">Edit your Information</a>
@@ -61,8 +63,7 @@
 		<a href="index.php">Payment Status</a>
 		<br>
 		
-		<h3>Events</h3>
-		<br>
+		<h3 style="margin-bottom: 2px;">Events</h3>
 		<a href="index.php">Create an Event</a>
 		<br>
 		<a href="index.php">Edit Event</a>
@@ -74,7 +75,7 @@
 		<a href="index.php">View Calendar</a>
 		<br>
 		
-		<h3>Financial</h3>
+		<h3 style="margin-bottom: 2px;">Financial</h3>
 		<a href="member_renewal_page.php">Operating Account</a>
 		<br>
 		<a href="index.php">Cultural Fund</a>

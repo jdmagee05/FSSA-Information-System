@@ -78,50 +78,52 @@
 	</div>	
 
      <div class="add_member_fields">
-     <h3>Add a Member to the Society</h3>
+     <h3>Edit your Information</h3>
 		<form action="updateMember.php" method="post" id="edit_member">
 		<table>
 		<tr>
 			<td>*First Name:</td>
-			<td><input type="text" name="firstname" value="<?php echo $firstname; ?>"><br></td>
+			<td><input type="text" name="firstname" value="<?php echo $firstname; ?>" required><br></td>
 			
 			<td>*Home Phone:</td>
-			<td><input type="text" name="homephone" value="<?php echo $homephone; ?>"><br></td>
+			<td><input type="tel" pattern="^\d{11}$" name="homephone" value="<?php echo $homephone; ?>" required><br></td>
+			<td>(Format: Country code, Area Code, Phone #. No separators)</td>
 		</tr>
 		<tr>
 			<td>*Last Name:</td>
-			<td><input type="text" name="lastname" value="<?php echo $lastname; ?>"><br></td>
+			<td><input type="text" name="lastname" value="<?php echo $lastname; ?>" required><br></td>
 			
 			<td>Cell Phone:</td>
-			<td><input type="text" name="cellphone" value="<?php echo $cellphone; ?>"><br></td>
+			<td><input type="tel" pattern="^\d{11}$" name="cellphone" value="<?php echo $cellphone; ?>"><br></td>
+			<td>(Format: Country code, Area Code, Phone #. No separators)</td>
 		</tr>
 		<tr>
 			<td>Middle Name:</td>
 			<td><input type="text" name="middlename" value="<?php echo $middlename; ?>"><br></td>
 			
 			<td>Email:</td>
-			<td><input type="text" name="email" value="<?php echo $email; ?>"><br></td>
+			<td><input type="email" name="email" value="<?php echo $email; ?>"><br></td>
 		</tr>
 		<tr>
 			<td>*Birth Date:</td>
-			<td><input type="date" name="birthDate" value="<?php echo $birthDate; ?>"><br></td>
+			<td><input type="date" name="birthDate" value="<?php echo $birthDate; ?>" required><br></td>
 		</tr>
 		<tr>
 			<td>*Birth Place:</td>
-			<td><input type="text" name="birthPlace" value="<?php echo $birthPlace; ?>"><br></td>
+			<td><input type="text" name="birthPlace" value="<?php echo $birthPlace; ?>" required><br></td>
 			
 			<td>*Username:</td>
-			<td><input type="text" name="username" value="<?php echo $username; ?>"></td>
+			<td><input type="text" name="username" value="<?php echo $username; ?>" required></td>
 		</tr>
 		<tr>
 			<td>*Address:</td>
-			<td><input type="text" name="address" value="<?php echo $address; ?>"><br></td>
+			<td><input type="text" name="address" value="<?php echo $address; ?>" required><br></td>
 			
 			
 		</tr>
 		<tr>
 			<td>*City:</td>
-			<td><input type="text" name="city" value="<?php echo $city; ?>"><br></td>
+			<td><input type="text" name="city" value="<?php echo $city; ?>" required><br></td>
 			
 			<td>Member Type:
 				<?php 
@@ -149,7 +151,7 @@
 		<tr>
 			<td>*Province:</td>
 			<td>
-				<select name="province">
+				<select name="province" required>
 					<option value="AB" <?php if ($province == "AB") echo ' selected="selected"'; ?>>Alberta</option>
 					<option value="BC" <?php if ($province == "BC") echo ' selected="selected"'; ?>>British Columbia</option>
 					<option value="MB" <?php if ($province == "MB") echo ' selected="selected"'; ?>>Manitoba</option>
@@ -185,14 +187,14 @@
 		</tr>
 		<tr>
 			<td>*Country:</td>
-			<td><input type="text" name="country" value="<?php echo $country; ?>"><br></td>
+			<td><input type="text" name="country" value="<?php echo $country; ?>" required><br></td>
 			
 			<td>Membership Expiry Date:</td>
 			<td><?php echo $expiry_date; ?></td>
 		</tr>
 		<tr>
 			<td>*Postal Code:</td>
-			<td><input type="text" name="postalcode" value="<?php echo $postalcode; ?>"><br></td>
+			<td><input type="text" name="postalcode" value="<?php echo $postalcode; ?>" required><br></td>
 		</tr>
 		
 		<tr>
