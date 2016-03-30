@@ -1,11 +1,5 @@
 <?php
 
-if(isset($_POST['username'])){
-    session_start();
-    $_SESSION['name']=$_POST['username'];
-    
-}
-
 ?>
 
 <html>

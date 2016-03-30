@@ -13,6 +13,10 @@
 		<?php include("../php/header.php")?>
 	</div>
 	<?php
+	
+	if($_SESSION['user_type'] != 'admin' && $_SESSION['user_type'] != 'member'){
+	    header("location: index.php");
+	}
 
     $member_ident = $_SESSION["member_id"];
 

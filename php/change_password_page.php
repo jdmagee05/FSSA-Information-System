@@ -14,6 +14,12 @@
 	</div>
 	
 	<?php 
+	if($_SESSION['user_type'] != 'admin' && $_SESSION['user_type'] != 'member'){
+	    header("location: index.php");
+	}
+	?>
+	
+	<?php 
 	
 	$currentPasswordError = "";
 	$newPasswordError = "";

@@ -1,6 +1,11 @@
 <?php
 
 session_start();
+
+if($_SESSION['user_type'] != 'admin'){
+    header("location: index.php");
+}
+
 $servername = "localhost";
 $dbUsername = "root";
 $password = "root";

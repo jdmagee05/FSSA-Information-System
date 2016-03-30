@@ -46,13 +46,18 @@ if($conn->connect_error){
 }
 
 $sql2=mysqli_query($conn, "CALL get_membership_expiry_date(" . $member_ident . ")");
+$expiry_date = null;
 while($row=mysqli_fetch_array($sql2)){
     $expiry_date = $row["RENEWAL_EXPIRY_DATE"];
 }
+
+if(is_null($expiry_date)){
+    $expiry_date = "Membership type has not been set.";
+}
+
 if($member_type == 4 || $member_type == 5 || $member_type == 6){
     $expiry_date = "N/A";
 }
-
 ?>
 
 <html>
@@ -66,7 +71,12 @@ if($member_type == 4 || $member_type == 5 || $member_type == 6){
 	<div class="header">
 		<?php include("../php/header.php")?>
 	</div>
-
+	
+	<?php 
+	if($_SESSION['user_type'] != 'admin'){
+	    header("location: index.php");
+	}
+	?>
 	<div class="nav_menu">
 		<?php include("../php/nav_menu.php")?>
 	</div>	

@@ -25,6 +25,12 @@ $result = mysqli_query($conn, "SELECT MEMBER_ID, FIRSTNAME, LASTNAME FROM MEMBER
 	<div class="header">
 		<?php include("../php/header.php")?>
 	</div>
+	
+	<?php 
+	if($_SESSION['user_type'] != 'admin'){
+	    header("location: index.php");
+	}
+	?>
 
 	<div class="nav_menu">
 		<?php include("../php/nav_menu.php")?>

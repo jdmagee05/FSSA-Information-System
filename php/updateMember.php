@@ -56,6 +56,12 @@ $stmt->execute();
 	<div class="header">
 		<?php include("../php/header.php")?>
 	</div>
+	
+	<?php 
+	if($_SESSION['user_type'] != 'admin' && $_SESSION['user_type'] != 'member'){
+	    header("location: index.php");
+	}
+	?>
 
 	<div class="nav_menu">
 		<?php include("../php/nav_menu.php")?>
