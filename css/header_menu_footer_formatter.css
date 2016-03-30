@@ -34,6 +34,12 @@ input[type=radio]{
 	display: inline;
 }
 
+input{
+	border-top-left-radius:5px;
+	border-bottom-right-radius : 10px;
+	outline:none;
+}
+
 .generated_table th, .generated_table tr, .generated_table td{
 	border: 1px solid black;
 }
