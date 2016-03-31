@@ -197,5 +197,9 @@ if($member_type == 4 || $member_type == 5 || $member_type == 6){
 		</form>
 	</div>
 	
+	<div class="footer">
+		<?php include("footer.php")?>
+	</div>
+	
 </body>
 </html>

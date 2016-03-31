@@ -17,10 +17,11 @@ $payment_amount = $_POST["payment_amount"];
 $date_renewed = date("Y-m-d H:i:s");
 
 if($member_type == 1 || $member_type == 2){
-    $expiry_date = date("Y-m-d", strtotime('+1 year', strtotime($date_renewed)));
+    $expiry_date = date("Y-09-30", strtotime('+1 year', strtotime($date_renewed)));
+    
 }
 elseif ($member_type == 3){
-    $expiry_date = date("Y-m-d,", strtotime('+5 years', strtotime($date_renewed)));
+    $expiry_date = date("Y-09-30,", strtotime('+5 years', strtotime($date_renewed)));
 }
 else{
     $expiry_date = null;
@@ -61,5 +62,9 @@ $stmt->execute();
 		<br><br>
 		<a href="index.php">Return home</a> or <a href="member_renewal_page.php">Renew another membership</a>
      </div>
+     
+     <div class="footer">
+		<?php include("footer.php")?>
+	</div>
 </body>
 </html>

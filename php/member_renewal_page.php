@@ -77,5 +77,9 @@ $result = mysqli_query($conn, "SELECT MEMBER_ID, FIRSTNAME, LASTNAME FROM MEMBER
 		</form>
 	</div>
 	
+	<div class="footer">
+		<?php include("footer.php")?>
+	</div>
+	
 </body>
 </html>

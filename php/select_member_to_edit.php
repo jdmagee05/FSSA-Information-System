@@ -48,6 +48,10 @@ $result = mysqli_query($conn, "SELECT MEMBER_ID, FIRSTNAME, LASTNAME FROM MEMBER
 			<input type="submit" value="Edit this member">
 		</form>
 	</div>
+	
+	<div class="footer">
+		<?php include("footer.php")?>
+	</div>
 		
 </body>
 </html>

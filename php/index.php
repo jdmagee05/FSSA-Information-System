@@ -41,3 +41,7 @@ An Associate member supports the objects of the Society, but does not have Scott
 </p>
 </div>
 
+<div class="footer">
+	<?php include("footer.php")?>
+</div>
+

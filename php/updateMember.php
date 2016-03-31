@@ -71,5 +71,9 @@ $stmt->execute();
      	<h3>Successfully updated member, <?php echo $firstname . " " . $lastname?></h3><br>
      	<a href="index.php">Return home</a>
      </div>
+     
+	<div class="footer">
+		<?php include("footer.php")?>
+	</div>
 </body>
 </html>
