@@ -35,7 +35,6 @@
      			<input type="radio" name="list_type" value="paid">Paid Memberships
      			<input type="radio" name="list_type" value="unpaid">Unpaid/Expired Memberships
      		</td>
-     		<td><a href="generate_unpaid_reminder.php">Generate Unpaid Reminder</a></td>
      	</tr>
      	<tr style="height:20px;">
      	</tr>

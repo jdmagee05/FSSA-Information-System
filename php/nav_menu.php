@@ -34,8 +34,7 @@
 		<h3 style="margin-bottom: 2px;">Member</h3>
 		<a href="index.php">Comments</a>
 		<br>
-		<a href="index.php">Surveys</a>
-		<br>
+		<!--  <a href="index.php">Surveys</a>-->
 		<a href="index.php">Payment Status</a>
 		<br>
 		<a href="edit_personal_info.php">Edit your Information</a>
@@ -58,8 +57,7 @@
 		<br>
 		<a href="generate_list_page.php">Generate Member Lists</a>
 		<br>
-		<a href="index.php">Surveys</a>
-		<br>
+		<!-- <a href="index.php">Surveys</a> -->
 		<a href="index.php">Payment Status</a>
 		<br>
 		

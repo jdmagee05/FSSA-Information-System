@@ -48,7 +48,7 @@ if($conn->connect_error){
 $sql2=mysqli_query($conn, "CALL get_membership_expiry_date(" . $member_ident . ")");
 $expiry_date = null;
 while($row=mysqli_fetch_array($sql2)){
-    $expiry_date = $row["RENEWAL_EXPIRY_DATE"];
+    $expiry_date = $row["EXPIRY_DATE"];
 }
 
 if(is_null($expiry_date)){

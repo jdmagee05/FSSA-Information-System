@@ -37,7 +37,7 @@ $result = mysqli_query($conn, "SELECT MEMBER_ID, FIRSTNAME, LASTNAME FROM MEMBER
 	</div>
 	
 	<div class="index_content">
-		<h3>Member Renewal</h3>
+		<h3>Pay/Renew Membership</h3>
 		
 		<form action="renewMember.php" method="post">
 			<table>

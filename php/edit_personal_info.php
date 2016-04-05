@@ -66,7 +66,7 @@
     
     $sql2=mysqli_query($conn, "CALL get_membership_expiry_date(" . $member_ident . ")");
     while($row=mysqli_fetch_array($sql2)){
-        $expiry_date = $row["RENEWAL_EXPIRY_DATE"];
+        $expiry_date = $row["EXPIRY_DATE"];
     }
     if($member_type == 4 || $member_type == 5 || $member_type == 6){
         $expiry_date = "N/A";
